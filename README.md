@@ -2,7 +2,7 @@
 
 This plugin tracks the changes in the Kong database and logs them in a table named audit-log.
 
-# Installation
+## Installation
 
 The plugin can be installed by using the following command:<br/>
 `luarocks install audit-log`
@@ -11,13 +11,13 @@ Also run the following command after installing the plugin:<br/>
 `kong migrations up`
 
 
-### Working
+## Working
 
 This plugin is mainly made up of SQL functions and triggers. The triggers are set to track changes in the *consumers*, *basicauth_credentials* and *plugins* tables. Only changes in rate-limits are logged from the `plugins` table.<br/>
 
 **NOTE:** The plugin creates SQL triggers as soon as the `kong migrations up` command is executed so it need not be enabled explicitly.
 
-### Log format
+## Log format
 
 The changes are logged in the following format:
 
@@ -33,7 +33,7 @@ The changes are logged in the following format:
 | action_by | The user who performed the operation. It is stored in *user@ip* format. |
 
 
-### Endpoint
+## Endpoint
 
 The audit-logs are exposed using the following endpoints:
 - `/audit-log` : It displays all the logs of the last 30 days.
