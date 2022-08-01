@@ -2,10 +2,20 @@
 
 This plugin tracks the changes in the Kong database and logs them in a table named audit-log.
 
+# Installation
+
+The plugin can be installed by using the following command:
+`luarocks install audit-log`
+
+Also run the following command after installing the plugin:
+`kong migrations up`
+
+
 ### Working
 
-This plugin is mainly made up of SQL functions and triggers. The triggers are set to track changes in the *consumers*, *basicauth_credentials* and *plugins* tables.<br/>
-**NOTE:** Only changes in rate-limits are logged from the `plugins` table.
+This plugin is mainly made up of SQL functions and triggers. The triggers are set to track changes in the *consumers*, *basicauth_credentials* and *plugins* tables. Only changes in rate-limits are logged from the `plugins` table.<br/>
+
+**NOTE:** The plugin creates SQL triggers as soon as the `kong migrations up` command is executed so it need not be enabled explicitly.
 
 ### Log format
 
