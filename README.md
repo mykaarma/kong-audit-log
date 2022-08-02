@@ -4,11 +4,20 @@ This plugin tracks the changes in the Kong database and logs them in a table nam
 
 ## Installation
 
+1. Using Luarocks:
 The plugin can be installed by using the following command:<br/>
 `luarocks install audit-log`
 
+2: Using source:
+`git clone https://github.com/mykaarma/kong-audit-log`<br/>
+`cd kong-audit-log`<br/>
+`luarocks make`<br/>
+
 Also run the following command after installing the plugin:<br/>
-`kong migrations up`
+`kong migrations up`<br/>
+
+Then, add the plugin to the `plugins` key in `kong.conf` file.<br/>
+`plugins=audit-log`
 
 
 ## Working
