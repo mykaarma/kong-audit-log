@@ -4,9 +4,9 @@ version = "0.1.0-1"
 
 supported_platforms = {"linux", "macosx"}
 source = {
-  url = "https://github.com/mykaarma/kong-audit-log/archive/refs/tags/0.1.0.tar.gz",
-  tag = "0.1.0",
-  dir = "kong-audit-log-0.1.0"
+  url = "https://github.com/mykaarma/kong-audit-log/archive/refs/tags/v0.1.0.tar.gz",
+  tag = "v0.1.0",
+  dir = "kong-audit-log-v0.1.0"
 }
 
 description = {
