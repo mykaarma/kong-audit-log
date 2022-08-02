@@ -4,7 +4,7 @@ version = "0.1.0-1"
 
 supported_platforms = {"linux", "macosx"}
 source = {
-  url = "https://github.com/mykaarma/kong-audit-log.git",
+  url = "https://github.com/mykaarma/kong-audit-log",
   tag = "0.1.0"
 }
 
