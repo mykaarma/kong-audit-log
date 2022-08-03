@@ -11,7 +11,7 @@ source = {
 description = {
   summary = "audit-log is a custom plugin made at MyKaarma to generate audit logs whenever a consumer/credential/rate-limit is created/updated/deleted in Kong",
   homepage = "https://github.com/mykaarma/kong-audit-log",
-  license = "MIT"
+  license = "AGPL-3"
 }
 
 dependencies = {
