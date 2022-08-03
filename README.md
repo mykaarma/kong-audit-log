@@ -47,7 +47,7 @@ The changes are logged in the following format:
 The audit-logs are exposed using the following endpoints:
 - `/audit-log` : It displays all the logs of the last 30 days.
 - `/audit-log/{entity}` : It displays all the logs belonging to that particular entity. Here, the entity can be either *consumer* or *basicauth_credentials* or *plugin*.
-- `/audit-log/{entity}/{entity_id} : It displays all the logs belonging to that particular entity with the provided entity_id;
+- `/audit-log/{entity}/{entity_id}` : It displays all the logs belonging to that particular entity with the provided entity_id;
 
 Also, the following parameters can be provided in the endpoint:
 - `operation`: The operation performed, i.e. either *created*, *deleted* or *updated*. 
