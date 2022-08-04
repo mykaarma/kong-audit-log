@@ -2,12 +2,31 @@
 
 This plugin tracks the changes in the Kong database and logs them in a table named audit-log.
 
-### Working
+## Installation
 
-This plugin is mainly made up of SQL functions and triggers. The triggers are set to track changes in the *consumers*, *basicauth_credentials* and *plugins* tables.<br/>
-**NOTE:** Only changes in rate-limits are logged from the `plugins` table.
+**Using Luarocks:**<br/>
+The plugin can be installed by using the following command:<br/>
+`luarocks install audit-log`
 
-### Log format
+**Using source:**<br/>
+`git clone https://github.com/mykaarma/kong-audit-log`<br/>
+`cd kong-audit-log`<br/>
+`luarocks make`<br/>
+
+Also run the following command after installing the plugin:<br/>
+`kong migrations up`<br/>
+
+Then, add the plugin to the `plugins` key in `kong.conf` file.<br/>
+`plugins=audit-log`
+
+
+## Working
+
+This plugin is mainly made up of SQL functions and triggers. The triggers are set to track changes in the *consumers*, *basicauth_credentials* and *plugins* tables. Only changes in rate-limits are logged from the `plugins` table.<br/>
+
+**NOTE:** The plugin creates SQL triggers as soon as the `kong migrations up` command is executed so it need not be enabled explicitly.
+
+## Log format
 
 The changes are logged in the following format:
 
@@ -23,12 +42,12 @@ The changes are logged in the following format:
 | action_by | The user who performed the operation. It is stored in *user@ip* format. |
 
 
-### Endpoint
+## Endpoint
 
 The audit-logs are exposed using the following endpoints:
 - `/audit-log` : It displays all the logs of the last 30 days.
 - `/audit-log/{entity}` : It displays all the logs belonging to that particular entity. Here, the entity can be either *consumer* or *basicauth_credentials* or *plugin*.
-- `/audit-log/{entity}/{entity_id} : It displays all the logs belonging to that particular entity with the provided entity_id;
+- `/audit-log/{entity}/{entity_id}` : It displays all the logs belonging to that particular entity with the provided entity_id;
 
 Also, the following parameters can be provided in the endpoint:
 - `operation`: The operation performed, i.e. either *created*, *deleted* or *updated*. 
