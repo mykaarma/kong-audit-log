@@ -6,6 +6,7 @@ tar zxpf luarocks-3.9.1.tar.gz
 cd luarocks-3.9.1
 
 echo "Running configure"
+export PATH=/usr/bin/lua:$PATH
 
 ./configure
 
