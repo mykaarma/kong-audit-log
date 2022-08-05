@@ -7,7 +7,9 @@ tar zxpf luarocks-3.9.1.tar.gz
 
 cd luarocks-3.9.1
 
-./configure && make && make install
+./configure
+make
+make install
 
 sudo luarocks --version
 
