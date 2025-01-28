@@ -1,11 +1,11 @@
 package = "audit-log"
-version = "0.1.0-1"
+version = "0.1.1-1"
 
 
 supported_platforms = {"linux", "macosx"}
 source = {
   url = "git://github.com/mykaarma/kong-audit-log",
-  tag = "0.1.0",
+  tag = "0.1.1",
 }
 
 description = {
@@ -26,5 +26,7 @@ build = {
     ["kong.plugins."..pluginName..".schema"] = "kong/plugins/"..pluginName.."/schema.lua",
     ["kong.plugins."..pluginName..".daos"] = "kong/plugins/"..pluginName.."/daos.lua",
     ["kong.plugins."..pluginName..".api"] = "kong/plugins/"..pluginName.."/api.lua",
+    ["kong.plugins."..pluginName..".migrations.000_base_audit_log"] = "kong/plugins/"..pluginName.."/migrations/000_base_audit_log.lua",
+    ["kong.plugins."..pluginName..".migrations.init"] = "kong/plugins/"..pluginName.."/migrations/init.lua",
   }
 }
