@@ -183,6 +183,4 @@ return {
         EXECUTE PROCEDURE basicauth_credentials_updated();
       ]]
     },
-    cassandra = {
-    }
 }

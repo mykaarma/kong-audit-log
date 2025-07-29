@@ -1,11 +1,11 @@
 package = "audit-log"
-version = "0.1.1-1"
+version = "1.0.0-0"
 
 
 supported_platforms = {"linux", "macosx"}
 source = {
-  url = "git://github.com/mykaarma/kong-audit-log",
-  tag = "0.1.1",
+  url = "git+https://github.com/mykaarma/kong-audit-log.git",
+  tag = "1.0.0",
 }
 
 description = {
