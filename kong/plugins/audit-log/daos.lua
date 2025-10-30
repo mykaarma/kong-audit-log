@@ -1,7 +1,7 @@
 local typedefs = require "kong.db.schema.typedefs"
 
 return {
-  audit_log = {
+  {
     name = "audit_log",
     primary_key = { "id" },
     fields = {

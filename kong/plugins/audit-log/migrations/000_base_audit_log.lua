@@ -182,7 +182,5 @@ return {
         FOR EACH ROW
         EXECUTE PROCEDURE basicauth_credentials_updated();
       ]]
-    },
-    cassandra = {
     }
 }
